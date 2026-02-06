@@ -17,9 +17,20 @@ else {
 }
 
 function moveBtn() {
+  const overlay = document.querySelector(".overlay");
+  const rect = overlay.getBoundingClientRect();
+  const btnRect = noBtn.getBoundingClientRect();
+
   noBtn.style.position = "absolute";
-  noBtn.style.left = Math.random() * (window.innerWidth - 120) + "px";
-  noBtn.style.top = Math.random() * (window.innerHeight - 60) + "px";
+
+  const maxX = rect.width - btnRect.width - 20;
+  const maxY = rect.height - btnRect.height - 20;
+
+  const x = Math.random() * maxX;
+  const y = Math.random() * maxY;
+
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
 }
 
 function angry() {
@@ -65,3 +76,4 @@ function hearts() {
     setTimeout(() => h.remove(), 5000);
   }, 300);
 }
+
