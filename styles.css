@@ -65,6 +65,7 @@ button{
   background:#444;
   color:white;
   position:relative; /* IMPORTANT */
+  transition: left 0.15s ease, top 0.15s ease;
 }
 
 /* EMOJI */
@@ -104,3 +105,4 @@ button{
     opacity:0;
   }
 }
+
